@@ -4,14 +4,21 @@ const allowedCors = [
   'https://localhost:3000',
   'http://localhost:3001/',
   'https://localhost:3001/',
-  // Тут будут еще адреса
+  'http://NobodyMaximDiploma.nomoredomainsicu.ru',
+  'https://NobodyMaximDiploma.nomoredomainsicu.ru',
+  'http://NobodyMaximDiploma.nomoredomainsicu.ru/',
+  'https://NobodyMaximDiploma.nomoredomainsicu.ru/',
+  'http://nobodymaximdiploma.nomoredomainsicu.ru',
+  'https://nobodymaximdiploma.nomoredomainsicu.ru',
+  'http://nobodymaximdiploma.nomoredomainsicu.ru/',
+  'https://nobodymaximdiploma.nomoredomainsicu.ru/',
 ];
 
 // eslint-disable-next-line consistent-return
 const corsAllow = (req, res, next) => {
   res.header(
     'Access-Control-Allow-Headers',
-    'Content-Type,Content-Length, Authorization, Accept,X-Requested-With',
+    'Content-Type,Content-Length, Authorization, Accept,X-Requested-With'
   );
   res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS,PATCH');
 
