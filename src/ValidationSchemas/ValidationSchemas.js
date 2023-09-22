@@ -1,5 +1,7 @@
 import Joi from 'joi';
 
+import urlRegex from '../utils/constants.js';
+
 export const signUpSchema = {
   body: Joi.object()
     .keys({
@@ -52,9 +54,9 @@ export const postMovieSchema = {
       duration: Joi.number().required(),
       year: Joi.string().required(),
       description: Joi.string().required(),
-      image: Joi.string().required(),
-      trailerLink: Joi.string().required(),
-      thumbnail: Joi.string().required(),
+      image: Joi.string().uri().required().regex(urlRegex),
+      trailerLink: Joi.string().uri().required().regex(urlRegex),
+      thumbnail: Joi.string().uri().required().regex(urlRegex),
       movieId: Joi.number().required(),
       nameRU: Joi.string().required(),
       nameEN: Joi.string().required(),
