@@ -44,6 +44,24 @@ export const patchUserSchema = {
     .unknown(true),
 };
 
+export const postMovieSchema = {
+  body: Joi.object()
+    .keys({
+      country: Joi.string().required(),
+      director: Joi.string().required(),
+      duration: Joi.number().required(),
+      year: Joi.string().required(),
+      description: Joi.string().required(),
+      image: Joi.string().required(),
+      trailerLink: Joi.string().required(),
+      thumbnail: Joi.string().required(),
+      movieId: Joi.number().required(),
+      nameRU: Joi.string().required(),
+      nameEN: Joi.string().required(),
+    })
+    .unknown(true),
+};
+
 // export const userIdSchema = {
 //   params: Joi.object()
 //     .keys({

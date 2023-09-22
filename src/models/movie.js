@@ -10,7 +10,7 @@ const movieSchema = new Schema({
     required: true,
   },
   duration: {
-    type: Int32Array,
+    type: Number,
     required: true,
   },
   year: {
