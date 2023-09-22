@@ -64,13 +64,10 @@ export const postMovieSchema = {
     .unknown(true),
 };
 
-// export const userIdSchema = {
-//   params: Joi.object()
-//     .keys({
-//       userId: Joi.string().length(24).hex().required(),
-//       user: Joi.object().keys({
-//         _id: Joi.string().length(24).hex().required(),
-//       }),
-//     })
-//     .unknown(true),
-// };
+export const userIdSchema = {
+  params: Joi.object()
+    .keys({
+      movieId: Joi.string().length(24).hex().required(),
+    })
+    .unknown(true),
+};
