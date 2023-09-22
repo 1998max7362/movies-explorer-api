@@ -4,14 +4,14 @@ const allowedCors = [
   'https://localhost:3000',
   'http://localhost:3001/',
   'https://localhost:3001/',
-  'http://NobodyMaximDiploma.nomoredomainsicu.ru',
-  'https://NobodyMaximDiploma.nomoredomainsicu.ru',
-  'http://NobodyMaximDiploma.nomoredomainsicu.ru/',
-  'https://NobodyMaximDiploma.nomoredomainsicu.ru/',
-  'http://nobodymaximdiploma.nomoredomainsicu.ru',
-  'https://nobodymaximdiploma.nomoredomainsicu.ru',
-  'http://nobodymaximdiploma.nomoredomainsicu.ru/',
-  'https://nobodymaximdiploma.nomoredomainsicu.ru/',
+  'http://NobodyMaximDiploma.nomoredomainsrocks.ru',
+  'https://NobodyMaximDiploma.nomoredomainsrocks.ru',
+  'http://NobodyMaximDiploma.nomoredomainsrocks.ru/',
+  'https://NobodyMaximDiploma.nomoredomainsrocks.ru/',
+  'http://nobodymaximdiploma.nomoredomainsrocks.ru',
+  'https://nobodymaximdiploma.nomoredomainsrocks.ru',
+  'http://nobodymaximdiploma.nomoredomainsrocks.ru/',
+  'https://nobodymaximdiploma.nomoredomainsrocks.ru/',
 ];
 
 // eslint-disable-next-line consistent-return
