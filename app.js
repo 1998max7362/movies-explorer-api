@@ -7,10 +7,10 @@ import cookieParser from 'cookie-parser';
 import corsAllow from './src/middlewares/CORS.js';
 import errorHandler from './src/middlewares/Errors/errorHandler.js';
 // import cardRouter from './src/routes/cardRoutes.js';
-// import userRouter from './src/routes/userRoutes.js';
+import userRouter from './src/routes/userRoutes.js';
 import limiter from './src/middlewares/rateLimit.js';
 import authRouter from './src/routes/authRoutes.js';
-// import auth from './src/middlewares/auth.js';
+import auth from './src/middlewares/auth.js';
 import WrongRouteError from './src/middlewares/Errors/customErrors/WrongRouteError.js';
 import { requestLogger, errorLogger } from './src/middlewares/logger.js';
 
@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
 app.use('/', authRouter);
-// app.use('/users', auth, userRouter);
+app.use('/users', auth, userRouter);
 // app.use('/cards', auth, cardRouter);
 app.use('*', () => {
   throw new WrongRouteError();
