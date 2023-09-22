@@ -8,7 +8,7 @@ const deleteMovie = async (req, res, next) => {
   try {
     const foundCard = await movie.findById({ _id: movieId });
     if (!foundCard) {
-      throw new NotFoundIdError('card');
+      throw new NotFoundIdError('movie');
     }
     if (foundCard.owner.valueOf() !== userId) {
       throw new NotEnoughRightsError();

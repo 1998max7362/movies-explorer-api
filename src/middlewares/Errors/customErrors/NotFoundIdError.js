@@ -1,6 +1,6 @@
 const pathToErrorMap = {
   user: 'Запрашиваемый пользователь не найден',
-  card: 'Запрашиваемая карточка не найдена',
+  movie: 'Запрашиваемый фильм не найден',
 };
 
 const pathToErrorMapper = (modelName) => pathToErrorMap[modelName];

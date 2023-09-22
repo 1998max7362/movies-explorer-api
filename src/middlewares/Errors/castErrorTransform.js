@@ -1,6 +1,6 @@
 const moderlToErrorMap = {
   user: 'Передан некорректный id пользователя',
-  card: 'Передан некорректный id карточки',
+  movie: 'Передан некорректный id фильма',
 };
 
 const modelToErrorMapper = (modelName) => moderlToErrorMap[modelName];
