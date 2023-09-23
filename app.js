@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import 'dotenv/config';
-import { errors } from 'celebrate';
+import { errors, celebrate } from 'celebrate';
 import { mongoose } from 'mongoose';
 import cookieParser from 'cookie-parser';
 import corsAllow from './src/middlewares/CORS.js';
@@ -14,6 +14,7 @@ import auth from './src/middlewares/auth.js';
 import WrongRouteError from './src/middlewares/Errors/customErrors/WrongRouteError.js';
 import { requestLogger, errorLogger } from './src/middlewares/logger.js';
 import logoutUser from './src/controllers/Users/logoutUser.js';
+import { authorizedUserSchema } from './src/ValidationSchemas/ValidationSchemas.js';
 
 const { PORT = 3000, MONGODB_URL = 'mongodb://0.0.0.0:27017/bitfilmsdb ' } = process.env;
 
@@ -33,7 +34,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
 app.use('/', authRouter);
-app.get('/signout', auth, logoutUser);
+app.get('/signout', auth, celebrate(authorizedUserSchema), logoutUser);
 app.use('/users', auth, userRouter);
 app.use('/movies', auth, moviesRoutes);
 app.use('*', () => {
