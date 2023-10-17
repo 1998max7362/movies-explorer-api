@@ -22,14 +22,10 @@ const movieSchema = new Schema({
     required: true,
   },
   image: {
-    type: String,
+    type: Object,
     required: true,
   },
   trailerLink: {
-    type: String,
-    required: true,
-  },
-  thumbnail: {
     type: String,
     required: true,
   },
@@ -38,7 +34,7 @@ const movieSchema = new Schema({
     ref: 'user',
     required: true,
   },
-  movieId: {
+  id: {
     type: Number,
     required: true,
   },

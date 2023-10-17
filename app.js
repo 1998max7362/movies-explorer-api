@@ -16,7 +16,7 @@ import { requestLogger, errorLogger } from './src/middlewares/logger.js';
 import logoutUser from './src/controllers/Users/logoutUser.js';
 import { authorizedUserSchema } from './src/ValidationSchemas/ValidationSchemas.js';
 
-const { PORT = 3000, MONGODB_URL = 'mongodb://0.0.0.0:27017/bitfilmsdb ' } = process.env;
+const { PORT = 3002, MONGODB_URL = 'mongodb://0.0.0.0:27017/bitfilmsdb ' } = process.env;
 
 try {
   await mongoose.connect(MONGODB_URL);

@@ -10,7 +10,7 @@ const postMovie = async (req, res, next) => {
     image,
     trailerLink,
     thumbnail,
-    movieId,
+    id,
     nameRU,
     nameEN,
   } = req.body;
@@ -26,7 +26,7 @@ const postMovie = async (req, res, next) => {
       trailerLink,
       thumbnail,
       owner,
-      movieId,
+      id,
       nameRU,
       nameEN,
     });

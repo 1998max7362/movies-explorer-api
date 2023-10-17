@@ -54,10 +54,9 @@ export const postMovieSchema = {
       duration: Joi.number().required(),
       year: Joi.string().required(),
       description: Joi.string().required(),
-      image: Joi.string().uri().required().regex(urlRegex),
+      image: Joi.object().required(),
       trailerLink: Joi.string().uri().required().regex(urlRegex),
-      thumbnail: Joi.string().uri().required().regex(urlRegex),
-      movieId: Joi.number().required(),
+      id: Joi.number().required(),
       nameRU: Joi.string().required(),
       nameEN: Joi.string().required(),
     })
